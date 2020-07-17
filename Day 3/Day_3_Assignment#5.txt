@@ -36,4 +36,4 @@ select * from customers where NOT Rating<=100 or city="Rome";
 +------+---------+------------+------+------+
 
 6)
- select * from salespeople where (comm > .12 OR comm <.14);
+ select * from salespeople where comm=0.13;
