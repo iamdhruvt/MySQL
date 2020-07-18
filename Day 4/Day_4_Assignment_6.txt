@@ -1,0 +1,18 @@
+1)
+select * from orders where Odate='1990-10-03' or Odate='1990-10-04';
+
+
+2)
+select * from customers where snum=1001 or snum=1004;
+
+
+3)
+select * from customers where Cname >'A' and Cname <'H';
+
+
+4)
+select * from customers where Cname like 'C%';
+
+
+5)
+select * from orders where NOT amt=0 or amt=null;
