@@ -1,0 +1,22 @@
+1)
+select count(Odate) from orders where Odate="1990-10-03";
+
+
+2)
+select count(distinct(city)) from customers where City is not NULL;
+
+
+3)
+select cnum, min(amt) from orders group by cnum;
+
+
+4)
+select Cname from customers where cname like 'G%' order by cname;
+
+
+5)
+select city,max(rating) from customers group by city;
+
+
+6)
+select count(distinct(snum)),odate from orders group by odate;
