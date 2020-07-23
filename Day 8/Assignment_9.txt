@@ -1,0 +1,24 @@
+1)
+SELECT A.onum,B.cname
+FROM orders A,
+customers B
+WHERE B.cnum=A.cnum ;
+
+2)
+select sname,cname,onum
+from salespeople A,
+customers B,
+orders C
+where C.snum=A.snum
+and C.snum=B.snum;
+ 
+3)
+select B.cname,A.sname,comm*100 "new_comm"
+from salespeople A,
+customers B
+where B.snum=A.snum
+and comm>.12;
+          
+4) 
+select amt,comm from orders A,customers B, salespeople C
+where A.snum = C.snum AND A.snum = B.snum AND rating > 100;

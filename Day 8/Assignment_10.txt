@@ -1,0 +1,12 @@
+1)
+SELECT DISTINCT s1.sname ,s2.sname
+FROM salespeople s1,salespeople s2
+WHERE s1.sname > s2.sname AND s1.city=s2.city;
+
+
+2)
+SELECT c1.rating, c1.cname , c2.city
+FROM customers c1, customers c2
+WHERE c1.rating=c2.rating
+GROUP BY c1.cname
+HAVING c1.rating = (SELECT rating FROM customers WHERE cname='Hoffman');
