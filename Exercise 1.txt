@@ -1,0 +1,117 @@
+1. 
+create table SEMP
+(
+EMPNO char(4),
+EMPNAME char(20),
+BASIC float(9,2),
+DEPTNO char(2),
+DEPTHEAD char(2)
+);
+
+
+2. 
+create table SDEPT
+(
+DEPTNO char(2),
+DEPTNAME char(15)
+);
+
+
+3.  
+a.   insert into SDEPT 
+     values('10','Devlopment');
+ 
+b.   insert into SDEPT 
+     values('20','Training');
+
+
+4.
+a.  insert into SEMP
+    values('0001','SUNIL',6000,'10','NULL');
+
+b.  insert into SEMP
+    values('0002','HIREN',8000,'20','NULL');
+
+c.  insert into SEMP
+    values('0003','ALI',4000,'10','0001');
+
+d.  insert into SEMP
+    values('0004','GEORGE',6000,'NULL','0001');
+
+e.   create table S
+    -> (
+    -> Sno char(2),
+    -> Sname varchar(15),
+    -> Status int,
+    -> City varchar(10)
+    -> );
+
+f.   create table P
+    -> (
+    -> Pno char(2),
+    -> Pname varchar(15),
+    -> Color varchar(10),
+    -> Weight int,
+    -> City varchar(10)
+    -> );
+
+g.   create table J
+    -> (
+    -> Jno char(2),
+    -> Jname varchar(15),
+    -> City varchar(10)
+    -> );
+
+h.   create table SPJ
+    -> (
+    -> Sno char(2),
+    -> Pno char(2),
+    -> Jno char(2),
+    -> Qty int
+    -> );
+
+
+5. 
+select * from S;
+
+
+
+6. 
+select sno,sname from s;
+
+
+7. 
+select Pname,color from P where CITY='London';
+
+
+8. 
+select * from S where City='London';
+
+
+9. 
+select * from S where City='Paris' or City='Athens';
+
+
+10. 
+select * from j where City='Athens';
+
+
+11. 
+select Pname,weight from P where weight between 12 and 14;
+
+
+12. 
+select * from s where status>=20;
+
+
+13. 
+select * from s where city!='London';
+
+
+14. 
+select city from s;
+
+
+15. 
+a. select weight*1000 from P;   
+    b. select weight/1000 from P;    
