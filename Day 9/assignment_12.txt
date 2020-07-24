@@ -1,0 +1,15 @@
+1) 
+select cname,rating from customers where
+	rating >= any (select rating from customers where 
+	snum in (select snum from salesperson where sname = 'serres'))
+
+2) 
+select cname,city from customers where city != all(select city from salesperson)
+
+3) 
+select * from orders where 
+	amt > any(select amt from orders where 
+	cnum = any(select cnum from Customers where city = 'london'))
+
+4) 
+select * from orders where amt > any(select min(amt) from orders where cnum = any(select cnum from Customers where city = 'london'))
