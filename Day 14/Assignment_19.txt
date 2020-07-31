@@ -1,0 +1,18 @@
+1) 
+   create view high_rating as
+    -> select * from customers group by snum having max(rating);
+	
+2) 
+   create view count_city as
+    -> select city, count(city) as 'Count' from salesperson group by city;
+
+3) 
+   create view avg_n_total as
+    -> select s.sname,avg(o.amt) as 'Average',count(o.amt) as 'Count' from orders o,salesperson s
+    -> where o.snum=s.snum
+    -> group by sname;
+	
+4) 
+   create view sperson_mul_cust as
+    -> select s.sname,c.cname from salesperson s,customers c
+    -> where s.snum=c.snum;
